@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout-cw</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-wrapper">
+        <div class="form_type-of-purchase">
+            <button class="form_type-of-purchase__buy">
+                Купить
+            </button>
+            <button class="form_type-of-purchase__rent" type="button">
+                Снять
+            </button>
+
+        </div>
+
+        <div class="form">
+
+            <form action="/">
+                <div class="form_inner">
+                    <div class="form_main-params">
+                        <div class="form__select form__select_type_of_object">
+                            <select>
+                                <option>
+                                    Вид объекта
+                                </option>
+                                <option>
+                                    Вторичка
+                                </option>
+                                <option>
+                                    Новостройка
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form__rooms">
+                            <select>
+                                <option>
+                                    Комнат
+                                </option>
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                                <option>
+                                    3
+                                </option>
+                                <option>
+                                    4+
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="form__price">
+                            <label>Цена </label>
+                            <input class="form__input form__input_price_min" placeholder="От">
+                            <input class="form__input form__input_price_max" placeholder="До">
+                        </div>
+
+                        <div class="form__square">
+                            <label>Площадь </label>
+                            <input class="form__input form__input_square_min" placeholder="От(м^2)">
+                            <input class="form__input form__input_square_max" placeholder="До(м^2)">
+                        </div>
+
+                        <div class="form__btn form__btn_show-more-params">
+                            <label>
+                                Ещё параметры
+                            </label>
+                            <button id="more-params-btn" type="button">
+                                Arr
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form_additional-params">
+                        <div class="form_seller">
+                            <div class="form__seller__name form_section_name">
+                                Продавец
+                            </div>
+                            <div class=".form_seller form_seller_private checkbox chooser">
+                                Частный
+                                <input type="checkbox">
+                            </div>
+                            <div class="form_seller form_seller_no-matter checkbox chooser">
+                                Неважно
+                                <input type="checkbox">
+                            </div>
+                        </div>
+
+                        <div class="form__floor">
+                            <div class="form__floor__name form_section_name">
+                                Этаж
+                            </div>
+                            <input type="text" placeholder="От" class="form__input form__floor_from">
+                            <input type="text" placeholder="До" class="form__input form__floor_to">
+
+                            <div class="form_floor form_floor_not-first checkbox">
+                                <label>Не первый</label>
+                                <input type="checkbox">
+                            </div>
+
+                            <div class="form_floor form_floor_not-last checkbox">
+                                <label>Не последний</label>
+                                <input type="checkbox">
+                            </div>
+
+                        </div>
+                        <div class="form__floor_building">
+                            <div class="form__floor_building__name form_section_name">
+                                Этажей в доме
+                            </div>
+                            <input type="text" placeholder="От" class="form__input form__floor_building_from">
+                            <input type="text" placeholder="До" class="form__input form__floor_building_to">
+                        </div>
+
+                        <div class="form__type-of-building">
+                            <div class="form__type-of-building__name form_section_name">
+                                Тип дома
+                            </div>
+                            <div class="form__type checkbox">
+                                <label>Кирпичный</label>
+
+                                <input type="checkbox">
+                            </div>
+                            <div class="form__type checkbox">
+                                <label>Панельный</label>
+                                <input type="checkbox">
+                            </div>
+
+                            <div class="form__type checkbox">
+                                <label>Блочный</label>
+                                <input type="checkbox">
+
+                            </div>
+                            <div class="form__type checkbox">
+                                <label>Монолитный</label>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                        <div class="balcony-loggia">
+                            <div class="balcon-loggia__name form_section_name">
+                                Балкон
+                            </div>
+                            <div class="balcony-loogia checkbox">
+                                <label>Балкон</label>
+                                <input type="checkbox">
+                            </div>
+
+                            <div class="balcony-loogia checkbox">
+                                <label>Лоджия</label>
+                                <input type="checkbox">
+                            </div>
+
+
+                        </div>
+
+                        <div class="form__square-kitchen">
+                            <div class="form__square-kitchen__name form_section_name">
+                                Площадь кухни
+                            </div>
+                            <input type="text" placeholder="От" class="form__input form__square-kitchen_from">
+                            <input type="text" placeholder="До" class="form__input form__square-kitchen_to">
+
+                            <div class="form_square-kitchen form_square-kitchen_not-matter checkbox">
+                                <label>Неважно</label>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+
+                        <div class="form__type-of-housing">
+                            <div class="form__type-of-housing__name form_section_name">
+                                Тип жилья
+                            </div>
+                            <div class="form_type-of-housing form_type-of-housing_flat checkbox">
+                                <label>Картира</label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="form_type-of-housing form_type-of-housing_apartments checkbox">
+                                <label>Апартаменты</label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="form_type-of-housing form_type-of-housing_not-matter checkbox">
+                                <label>Неважно</label>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="btn__section">
+                    <div class="btns__btn">
+                        <button class="btns__btn btns__btn_show" type="submit">
+                            Показать
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+        <div class="card">
+            <div class="card-images">
+                <div class="card__swiper_wrap">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="images/card_images/img.png" height="320" width="386"
+                                                           alt="photo_1"></div>
+                            <div class="swiper-slide"><img src="images/card_images/img_1.png" alt="photo_2"
+                                                           height="320"
+                                                           width="366"></div>
+                            <div class="swiper-slide"><img src="images/card_images/img_2.png" alt="photo_3"
+                                                           height="320"
+                                                           width="366"></div>
+                            <div class="swiper-slide"><img src="images/card_images/img_3.png" alt="photo_4"
+                                                           height="320"
+                                                           width="366"></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+
+                </div>
+
+                <div class="examples">
+                    <div class="card__img card__img_1">
+                        <img src="images/card_images/img_1.png" alt="photo_2" height="102px" width="128px">
+                    </div>
+
+                    <div class="card__img card__img_2">
+                        <img src="images/card_images/img_2.png" alt="photo_3" height="102px" width="128px">
+                    </div>
+
+                    <div class="card__img card__img_2">
+                        <img src="images/card_images/img_3.png" alt="photo_4" height="102px" width="128px">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card-info">
+
+                <div class="card__head">
+                    <!--            1-->
+                    <div class="card__head_title_desription">
+                        <p>
+                            <span class="card__head_title__desription_rooms">3</span>-Комнатная квартира, <span
+                                class="card__head_title_square">56</span>м<sup>2</sup>
+                        </p>
+                    </div>
+                    <!--            2-->
+                    <div class="card__head card__head_title_price">
+                        <p>
+                            <span class="card__head_title_price_num">25 000</span>/мес.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="card__line">
+
+                </div>
+
+                <div class="card__body_type-of-building">
+                    <span>Новостройка</span>
+
+                </div>
+
+                <div class="card__body_floor">
+                    <span class="card__body_floor_curr">3</span>/<span class="card__body_floor_from">10</span> этаж
+                </div>
+
+                <div class="card__body_address">
+                    <span class="card__body_address_street">Приокская</span>, <span
+                        class="card__body_address_number-of-house">23/6</span>
+                </div>
+
+
+                <button class="card__body__button-show">Показать</button>
+
+            </div>
+        </div>
+
+</div>
+<script src="index.js" type="module">
+
+</script>
+</body>
+</html>
