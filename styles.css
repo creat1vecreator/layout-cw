@@ -17,8 +17,8 @@
 }
 
 html, body {
-    padding: 0;
-    margin: 0;
+    font-family: Muller;
+
 }
 .page {
     background: url("images/building.jpg") no-repeat center top;
