@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -11,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
 </head>
-<body>
+<body class="page">
 
 <div class="container">
     <div class="form-wrapper">
@@ -30,35 +29,35 @@
             <form action="/">
                 <div class="form_inner">
                     <div class="form_main-params">
-                        <div class="form__select form__select_type_of_object">
-                            <select>
-                                <option>
+                        <div class="form__select form__select_type_of_object select">
+                            <select class="select">
+                                <option class="option">
                                     Вид объекта
                                 </option>
-                                <option>
+                                <option class="option">
                                     Вторичка
                                 </option>
-                                <option>
+                                <option class="option">
                                     Новостройка
                                 </option>
                             </select>
                         </div>
 
                         <div class="form__rooms">
-                            <select>
-                                <option>
+                            <select class="select">
+                                <option class="option">
                                     Комнат
                                 </option>
-                                <option>
+                                <option class="option">
                                     1
                                 </option>
-                                <option>
+                                <option class="option">
                                     2
                                 </option>
-                                <option>
+                                <option class="option">
                                     3
                                 </option>
-                                <option>
+                                <option class="option">
                                     4+
                                 </option>
                             </select>
@@ -92,11 +91,11 @@
                                 Продавец
                             </div>
                             <div class=".form_seller form_seller_private checkbox chooser">
-                                Частный
+                                <label>Частный</label>
                                 <input type="checkbox">
                             </div>
                             <div class="form_seller form_seller_no-matter checkbox chooser">
-                                Неважно
+                                <label>Неважно</label>
                                 <input type="checkbox">
                             </div>
                         </div>
@@ -217,33 +216,28 @@
             <div class="card-images">
                 <div class="card__swiper_wrap">
                     <div class="swiper">
-                        <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide"><img src="images/card_images/img.png" height="320" width="386"
-                                                           alt="photo_1"></div>
+                                                           alt="photo_1">
+                            </div>
                             <div class="swiper-slide"><img src="images/card_images/img_1.png" alt="photo_2"
                                                            height="320"
-                                                           width="366"></div>
+                                                           width="366">
+                            </div>
                             <div class="swiper-slide"><img src="images/card_images/img_2.png" alt="photo_3"
                                                            height="320"
-                                                           width="366"></div>
+                                                           width="366">
+                            </div>
                             <div class="swiper-slide"><img src="images/card_images/img_3.png" alt="photo_4"
                                                            height="320"
-                                                           width="366"></div>
-                            ...
+                                                           width="366">
+                            </div>
                         </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
+                        <!--navigation buttons -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
-
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
                     </div>
-
                 </div>
 
                 <div class="examples">
@@ -265,18 +259,13 @@
             <div class="card-info">
 
                 <div class="card__head">
-                    <!--            1-->
                     <div class="card__head_title_desription">
-                        <p>
                             <span class="card__head_title__desription_rooms">3</span>-Комнатная квартира, <span
                                 class="card__head_title_square">56</span>м<sup>2</sup>
-                        </p>
                     </div>
                     <!--            2-->
                     <div class="card__head card__head_title_price">
-                        <p>
-                            <span class="card__head_title_price_num">25 000</span>/мес.
-                        </p>
+                        <strong><span class="card__head_title_price_num">25 000</span>/мес.</strong>
                     </div>
 
                 </div>
@@ -288,7 +277,6 @@
 
                 <div class="card__body_type-of-building">
                     <span>Новостройка</span>
-
                 </div>
 
                 <div class="card__body_floor">
@@ -299,7 +287,6 @@
                     <span class="card__body_address_street">Приокская</span>, <span
                         class="card__body_address_number-of-house">23/6</span>
                 </div>
-
 
                 <button class="card__body__button-show">Показать</button>
 

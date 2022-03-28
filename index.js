@@ -4,24 +4,33 @@ const swiper = new Swiper('.swiper', {
     direction: 'vertical',
     loop: true,
 
+    pagination: {
+        el: '.swiper-pagination',
+    },
 
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
 });
 
-const moreParamsBtn = document.getElementById('more-params-btn');
+const moreParamsBtn = document.querySelector('.form__btn_show-more-params');
 moreParamsBtn.addEventListener('click', () => {
     document.querySelector('.form_additional-params').classList.toggle('is-opened');
 });
 
-const checboxesArray = document.querySelectorAll('.checkbox');
-checboxesArray.forEach(ch => {
+const checkboxesArray = document.querySelectorAll('.checkbox');
+checkboxesArray.forEach(ch => {
     ch.addEventListener('click', (evt) => {
-        evt.target.classList.toggle('is-checked');
+        evt.target.nodeName === 'DIV'
+            ? evt.target.classList.toggle('is-checked')
+            : evt.target.parentElement.classList.toggle('is-checked');
     })
-})
+});
 
 

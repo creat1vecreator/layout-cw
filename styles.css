@@ -16,8 +16,12 @@
     font-style: normal;
 }
 
-body {
-    font-family: Muller;
+html, body {
+    padding: 0;
+    margin: 0;
+}
+.page {
+    background: url("images/building.jpg") no-repeat center top;
 }
 
 .form-wrapper {
@@ -27,6 +31,7 @@ body {
     font-size: 20px;
     border-radius: 20px;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -77,6 +82,7 @@ body {
     align-items: center;
     justify-content: space-between;
     display: flex;
+
 }
 
 .form_additional-params {
@@ -90,8 +96,7 @@ body {
 }
 
 
-.form_additional-params input, .checkbox {
-
+.form_additional-params input {
     -webkit-appearance: none;
 }
 
@@ -138,6 +143,10 @@ body {
     padding: 10px;
     opacity: 0.5;
 }
+
+.checkbox, .checkbox > * {
+    cursor: pointer;
+}
 .is-checked {
     background: #F8A655;
     opacity: 1;
@@ -147,8 +156,6 @@ body {
 .is-checked label {
     background: #F8A655;
     opacity: 0.5;
-
-
 }
 
 .is-opened {
@@ -233,8 +240,10 @@ body {
 }
 
 .card__head {
+    align-items: center;
     display: flex;
     font-size: 27px;
+    margin-bottom: 15px;
 }
 
 
@@ -287,3 +296,28 @@ body {
     color: #FFFFFF;
 }
 
+.select {
+    background: #D7E8F9;
+    border: none;
+    cursor: pointer;
+    
+
+}
+
+.option {
+    border: darkmagenta 1px solid;
+    background: #E5EFFA;
+}
+
+option {
+    border: darkmagenta 1px solid;
+    background: #E5EFFA;
+}
+
+.form__btn_show-more-params > *{
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
